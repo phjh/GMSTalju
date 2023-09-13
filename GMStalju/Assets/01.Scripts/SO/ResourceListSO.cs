@@ -6,7 +6,7 @@ using UnityEngine;
 public class ResourceValue
 {
     public ResourceSO resourceMain;
-    public int resourceCount;
+    public int resourceCount; 
 }
 
 [CreateAssetMenu(menuName = ("SO/Resource/List"))]
