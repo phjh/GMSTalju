@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
+  m_Name: AdratleOre
+  m_EditorClassIdentifier: 
+  resourceName: NULL
+  resourceImage: {fileID: 0}
+  resourceExplain: There is no explian

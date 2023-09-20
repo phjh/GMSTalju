@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
-  m_Name: Sample
+  m_Name: TitaniumOre
   m_EditorClassIdentifier: 
-  resourceName: Sample
+  resourceName: NULL
   resourceImage: {fileID: 0}
-  resourceExplain: This is sample
+  resourceExplain: There is no explian
