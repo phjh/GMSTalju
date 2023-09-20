@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: IronOre
   m_EditorClassIdentifier: 
-  resourceName: NULL
+  resourceName: "\uCCA0 \uAD11\uC11D"
   resourceImage: {fileID: 0}
-  resourceExplain: There is no explian
+  resourceExplain: "\uD754\uD55C \uCCA0 \uAD11\uC11D\uC774\uB2E4. \uBAA8\uB4E0 \uC81C\uC791\uC758
+    \uAE30\uCD08\uAC00 \uB418\uB294 \uC544\uC8FC \uC911\uC694\uD55C \uC790\uC6D0\uC774\uB2E4."

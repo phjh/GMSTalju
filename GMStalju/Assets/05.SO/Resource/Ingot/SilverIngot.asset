@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
-  m_Name: AdratleOre
+  m_Name: SilverIngot
   m_EditorClassIdentifier: 
-  resourceName: "\uC544\uB4DC\uB77C\uD2C0 \uAD11\uC11D"
+  resourceName: "\uCCA0 \uC8FC\uAD34"
   resourceImage: {fileID: 0}
-  resourceExplain: "\uBBF8\uC9C0\uC758 \uAD11\uBB3C\uC778 \uC544\uB4DC\uB77C\uD2C0\uC758
-    \uAD11\uC11D\uC774\uB2E4. \uC5C4\uCCAD\uB09C \uC591\uC758 \uC5D0\uB108\uC9C0\uAC00
-    \uCE21\uC815\uB41C\uB2E4."
+  resourceExplain: "\uAC00\uACF5\uB41C \uCCA0 \uC8FC\uAD34\uB2E4. \uB2E4\uBC29\uBA74\uC73C\uB85C
+    \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."

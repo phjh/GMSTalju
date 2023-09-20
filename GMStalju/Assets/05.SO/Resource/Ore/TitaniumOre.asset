@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: TitaniumOre
   m_EditorClassIdentifier: 
-  resourceName: NULL
+  resourceName: "\uD2F0\uD0C0\uB284 \uAD11\uC11D"
   resourceImage: {fileID: 0}
-  resourceExplain: There is no explian
+  resourceExplain: "\uB2E8\uB2E8\uD558\uAE30\uB85C\uB294 \uC81C\uC77C\uC778 \uD2F0\uD0C0\uB284
+    \uAD11\uC11D\uC774\uB2E4.  \uAC00\uBCBC\uC6B0\uBA74\uC11C\uB3C4 \uAC15\uD55C\uAC8C
+    \uD2B9\uC9D5\uC774\uB2E4."
