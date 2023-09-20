@@ -18,7 +18,7 @@ public class TileSystem : MonoBehaviour
 
         _grid = GetComponent<Grid>();
 
-        multiplied = (float)_grid.cellSize.x / (float)Vector3.one.x;
+        multiplied = _grid.cellSize.x / Vector3.one.x;
     }
     
 }

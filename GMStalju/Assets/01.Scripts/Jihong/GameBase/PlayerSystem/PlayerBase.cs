@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking.PlayerConnection;
+using UnityEngine.Serialization;
 
 public class PlayerBase : PlayerRoot
 {
+    [FormerlySerializedAs("_animator")]
     [Header("참조변수")]
     [SerializeField]
-    protected Animator _animator;
+    protected Animator animator;
     [SerializeField]
-    protected Rigidbody2D _rb;
+    protected Rigidbody2D rb;
 
     [Header("값 설정 변수")]
     [SerializeField]
