@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: SteelIngot
   m_EditorClassIdentifier: 
-  resourceName: "\uCCA0 \uC8FC\uAD34"
+  resourceName: "\uAC15\uD654 \uCCA0 \uC8FC\uAD34"
   resourceImage: {fileID: 0}
-  resourceExplain: "\uAC00\uACF5\uB41C \uCCA0 \uC8FC\uAD34\uB2E4. \uB2E4\uBC29\uBA74\uC73C\uB85C
-    \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+  resourceExplain: "\uB354 \uB2E8\uB2E8\uD574\uC9C4 \uAC15\uD654 \uCCA0 \uC8FC\uAD34\uB2E4.
+    \uCCA0\uBCF4\uB2E4 \uD6E8\uC52C \uB2E8\uB2E8\uD558\uB2E4."

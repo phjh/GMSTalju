@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: AdratleIngot
   m_EditorClassIdentifier: 
-  resourceName: "\uCCA0 \uC8FC\uAD34"
+  resourceName: "\uC544\uB4DC\uB77C\uD2C0 \uC8FC\uAD34"
   resourceImage: {fileID: 0}
-  resourceExplain: "\uAC00\uACF5\uB41C \uCCA0 \uC8FC\uAD34\uB2E4. \uB2E4\uBC29\uBA74\uC73C\uB85C
-    \uC0AC\uC6A9\uD560 \uC218 \uC788\uB2E4."
+  resourceExplain: "\uAC00\uACF5\uB41C \uC544\uB4DC\uB77C\uD2C0 \uC8FC\uAD34\uB2E4.
+    \uC815\uC81C\uD588\uC74C\uC5D0\uB3C4 \uC5D0\uB108\uC9C0\uAC00 \uB118\uCE5C\uB2E4."
