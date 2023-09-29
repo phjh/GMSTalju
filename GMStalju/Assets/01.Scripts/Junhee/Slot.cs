@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     [SerializeField] Image image;
-
+   
     private Item _item;
+
+   
     public Item item
     {
         get
@@ -24,7 +26,8 @@ public class Slot : MonoBehaviour
             }
             else
             {
-                image.color = new Color(1, 1, 1, 0);
+                Debug.Log("ºó°ª");
+                //image.color = new Color(1, 1, 1, 0);
             }
 
         }

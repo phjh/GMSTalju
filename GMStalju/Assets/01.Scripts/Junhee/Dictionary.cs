@@ -4,11 +4,27 @@ using UnityEngine;
 
 public class Dictionary : MonoBehaviour
 {
+
+    //아이템 처음에 못 들어가게 하기.
+    // 클릭한 아이템만 들어가게 하기. 
+   
+    
     public List<Item> items;
     Item _itme;
+   
 
     [SerializeField] private Transform slotParent;
     [SerializeField] Slot[] slots;
+    
+    ObjectItem objectItem;
+    int clickcount = 0;
+    
+    private void Awake()
+    {
+        objectItem = GetComponent<ObjectItem>();
+      
+        
+    }
 
     private void OnValidate()
     {       
@@ -25,21 +41,28 @@ public class Dictionary : MonoBehaviour
 
             if(hit.collider!=null)
             {
+
+               
                 HitClickObject(hit);
+                
             }
+            
         }
     }
 
     void HitClickObject(RaycastHit2D hit)
     {
-        ObjectItem clickInterface = hit.transform.gameObject.GetComponent<ObjectItem>();
+        IObjectItem clickInterface = hit.transform.gameObject.GetComponent<IObjectItem>();
         if(clickInterface!=null)
         {
-            Item item = clickInterface.ClickItem();
-            Debug.Log($"{item},{item.name}");
-            AddItem(item);
-            FreshSlot();
+            clickcount++;
+            Debug.Log(clickcount);
+            Item item = clickInterface.clickTime();
+            
+            AddItem(_itme);
+
         }
+       
 
     }
 
@@ -47,11 +70,11 @@ public class Dictionary : MonoBehaviour
     public void FreshSlot()
     {
         int i = 0;
-       for(; i<items.Count&&i<slots.Length;i++)
+        if(i<clickcount)
         {
             slots[i].item = items[i];
         }
-       for(;i<slots.Length;i++)
+       for(; i<slots.Length;i++)
         {
             slots[i].item = null;
         }
@@ -62,12 +85,17 @@ public class Dictionary : MonoBehaviour
     {
         if(items.Count<slots.Length)
         {
+            
             items.Add(_item);
+            FreshSlot();
+
 
         }
+     
         else
         {
             Debug.Log("꽉참");
         }
     }
+
 }
