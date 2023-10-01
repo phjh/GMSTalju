@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: lightingStone
   m_EditorClassIdentifier: 
   itemName: "\uBE5B\uB098\uB294 \uB3CC"
+  itemexplanation: just light
   itemImage: {fileID: 21300000, guid: fd6d011ef60d94c4491fa694d80f2a2b, type: 3}
+  ClickCheck: 0

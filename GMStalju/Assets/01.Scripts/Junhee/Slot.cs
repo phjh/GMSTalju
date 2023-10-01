@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    [SerializeField] Image image;
+   public Image image;
    
     private Item _item;
+    
 
    
+
     public Item item
     {
         get
@@ -21,6 +23,7 @@ public class Slot : MonoBehaviour
             _item = value;
             if(_item!=null)
             {
+                
                 image.sprite = item.itemImage;
                 image.color = new Color(1, 1, 1, 1);
             }
@@ -32,7 +35,5 @@ public class Slot : MonoBehaviour
 
         }
     }
-
-
 
 }

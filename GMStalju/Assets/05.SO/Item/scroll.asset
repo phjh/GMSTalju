@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdae01113bbc0aa4180260ed7de2b7ee, type: 3}
-  m_Name: stone
+  m_Name: scroll
   m_EditorClassIdentifier: 
-  itemName: "\uB3CC"
-  itemexplanation: just stone
-  itemImage: {fileID: 21300000, guid: 7dd87ea476db0d24b87c35e8d35913ef, type: 3}
-  ClickCheck: 0
+  itemName: "\uB450\uB8E8\uB9C8\uB9AC"
+  itemexplanation: "\uD3C9\uBC94\uD55C \uB450\uB8E8\uB9C8\uB9AC"
+  itemImage: {fileID: 21300000, guid: b13ab054689fc314f919f236a312be2b, type: 3}

@@ -77,7 +77,7 @@ public class DayCount : MonoBehaviour
     IEnumerator DayRoutine  (float daytime)
     {
         daychange = true;
-        Debug.Log(daychange);
+        
         while (daytime > 1.0f)
         {
            

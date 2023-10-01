@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdae01113bbc0aa4180260ed7de2b7ee, type: 3}
-  m_Name: stone
+  m_Name: Potion
   m_EditorClassIdentifier: 
-  itemName: "\uB3CC"
-  itemexplanation: just stone
-  itemImage: {fileID: 21300000, guid: 7dd87ea476db0d24b87c35e8d35913ef, type: 3}
-  ClickCheck: 0
+  itemName: "\uD3EC\uC158"
+  itemexplanation: "\uCCB4\uB825\uD68C\uBCF5"
+  itemImage: {fileID: 21300000, guid: d4816fccc66fe9443a6c78f4384598d2, type: 3}

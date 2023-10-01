@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: greenstone
   m_EditorClassIdentifier: 
   itemName: "\uBCF4\uC11D"
+  itemexplanation: greenlight
   itemImage: {fileID: 21300000, guid: eb675c48b4851e14c8c9220d75aaa855, type: 3}
+  ClickCheck: 0
