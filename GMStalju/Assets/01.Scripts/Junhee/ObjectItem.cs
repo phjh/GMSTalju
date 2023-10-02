@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectItem : MonoBehaviour, IObjectItem
 {
     [Header("æ∆¿Ã≈€")]
@@ -11,8 +12,8 @@ public class ObjectItem : MonoBehaviour, IObjectItem
 
 
     public bool clicking = false;
-   
     public GameObject box;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
