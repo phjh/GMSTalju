@@ -5,6 +5,7 @@ using TMPro;
 
 public class ItemBtn : MonoBehaviour
 {
+    [SerializeField] GameObject Dictionary;
     [SerializeField] TextMeshProUGUI ItemName;
     [SerializeField] TextMeshProUGUI ItemExplanationText;
     [SerializeField] string[] Name;
@@ -38,6 +39,15 @@ public class ItemBtn : MonoBehaviour
         Debug.Log("±Û¾¾");
         ItemName.text = " " + Name[4];
         ItemExplanationText.text = " " + explanation[4];
+    }
+
+    public void OpenBtn()
+    {
+        Dictionary.SetActive(true);
+    }
+    public void ExitBtn()
+    {
+        Dictionary.SetActive(false);
     }
 
 }
