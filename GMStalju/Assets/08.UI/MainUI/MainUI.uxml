@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/08.UI/MainUI/MainUI.uss?fileID=7433441132597879392&amp;guid=673be1d501d6f6743a996f5cf197b348&amp;type=3#MainUI" />
+    <ui:VisualElement name="rootVisualElement" style="height: 100%; width: 100%;">
+        <ui:VisualElement name="InventoryTagBoard" style="height: 10%; background-color: rgba(123, 123, 123, 0.12);" />
+        <ui:VisualElement name="InventoryBoard" style="height: 90%; background-color: rgb(58, 58, 58); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; width: 100%;">
+            <ui:VisualElement name="InventoryListRoot" style="width: 68%; height: 100%; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; position: absolute; background-color: rgb(192, 192, 192); border-top-left-radius: 1px; border-bottom-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; left: 0.5%; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+            <ui:VisualElement name="InfomationRoot" style="height: 100%; width: 29%; left: 70%; position: absolute; border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0);">
+                <ui:VisualElement name="ItemImage" style="height: 50%; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(130, 130, 130); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+                <ui:Label text="Item Name" display-tooltip-when-elided="true" style="width: 100%; height: 10%; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; font-size: 50px; -unity-text-align: middle-center; -unity-font-style: bold; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                <ui:VisualElement name="ItemInfomation" style="height: 40%; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; background-color: rgb(135, 135, 135); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
