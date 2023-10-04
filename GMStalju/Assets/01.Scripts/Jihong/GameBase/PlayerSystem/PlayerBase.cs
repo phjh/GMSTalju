@@ -1,9 +1,9 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
+using DG.Tweening;
 
 public class PlayerBase : PlayerRoot
 {
-    [FormerlySerializedAs("_animator")]
     [Header("참조변수")]
     [SerializeField]
     protected Animator animator;
@@ -17,10 +17,17 @@ public class PlayerBase : PlayerRoot
     protected int level;
     [SerializeField]
     protected Vector2 recallPos;
+    [SerializeField]
+    protected float speed = 2f;
 
     [Header("디버깅 변수")]
     [SerializeField]
     protected int positionAsTilemap;
+    [SerializeField]
+    protected MoveDir moveDir;
+
+    [SerializeField]
+    protected bool isMoving = false;
 
     private void Start()
     {
@@ -30,6 +37,23 @@ public class PlayerBase : PlayerRoot
     private void RecallEvent(Vector2 value)
     {
         transform.position = value;
+    }
+
+    protected void Move(Vector2 pos)
+    {
+        Ray2D ray;
+        if (!Physics2D.BoxCast(transform.localPosition, transform.localScale, 45 * (float)moveDir, Vector2.up, TileSystem.tileSystem.multiplied))
+        {
+            
+        }
+        
+    }
+
+    IEnumerator MoveTo(Vector2 pos)
+    {
+        isMoving = true;
+        yield return transform.DOMove(pos, Vector2.Distance(transform.position, pos) / speed, false);
+        isMoving = false;
     }
 
 }
