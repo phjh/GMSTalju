@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: RubyOre
   m_EditorClassIdentifier: 
-  resourceName: NULL
+  resourceName: "\uB8E8\uBE44 \uAD11\uC11D"
   resourceImage: {fileID: 0}
-  resourceExplain: There is no explian
+  resourceExplain: "\uBD89\uC740 \uC0C9\uC758 \uB8E8\uBE44 \uAD11\uC11D\uC774\uB2E4.
+    \uAC00\uACF5\uC774 \uC5B4\uB835\uC9C0\uB9CC, \uB192\uC740 \uB4F1\uAE09\uC758
+    \uC544\uC774\uD15C\uC744 \uB9CC\uB4E4 \uC218 \uC788\uB2E4."
