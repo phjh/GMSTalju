@@ -36,6 +36,14 @@ public class DayCount : MonoBehaviour
         {
             MovingCountEnd();
         }
+        if(movecount<=0&&daychange==true)
+        {
+            daychange = false;
+            MovingCountEnd();
+            Debug.Log("초기화");
+        }
+     
+
         else rMove();
 
     }
@@ -68,7 +76,7 @@ public class DayCount : MonoBehaviour
         movecount = addcount;
         daycount++;
         CountTextUpdate();
-        Debug.Log("횟수 초기화");
+      
         
     }
 
@@ -76,10 +84,10 @@ public class DayCount : MonoBehaviour
 
     IEnumerator DayRoutine  (float daytime)
     {
-        daychange = true;
         
         while (daytime > 1.0f)
         {
+        daychange = true;
            
             daytime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
