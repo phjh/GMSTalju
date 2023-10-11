@@ -28,4 +28,29 @@ public abstract class PlayerRoot : MonoBehaviour
         Recallcoord?.Invoke(dir);
     }
 
+    protected Vector2 Inverter(MoveDir dir)
+    {
+        switch (dir)
+        {
+            case MoveDir.UP:
+                return Vector2.up;
+            case MoveDir.RIGHTUP:
+                return Vector2.up + Vector2.right;
+            case MoveDir.RIGHT:
+                return Vector2.right;
+            case MoveDir.RIGHTDOWN:
+                return Vector2.down + Vector2.right;
+            case MoveDir.DOWN:
+                return Vector2.down;
+            case MoveDir.LEFTDOWN:
+                return Vector2.down + Vector2.left;
+            case MoveDir.LEFT:
+                return Vector2.left;
+            case MoveDir.LEFTUP:
+                return Vector2.left + Vector2.up;
+            default:
+                return Vector2.zero;
+        }
+    }
+    
 }
