@@ -9,11 +9,11 @@ public class ResourceValue
 	public int resourceCount;
 }
 
-public abstract class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
 
 	[SerializeField] private ResourceListSO inventoryListSO;
-	public int listLength = 0;
+	[HideInInspector] public int listLength = 0;
 
 	[SerializeField] private GameObject ItemIconPrefab;
 	public GameObject iconParent;
@@ -25,6 +25,7 @@ public abstract class Inventory : MonoBehaviour
 			string path = Path.Combine(Application.dataPath, "InventoryData.json");
 			string jsonData = File.ReadAllText(path);
 			inventoryListSO = JsonUtility.FromJson<ResourceListSO>(jsonData);
+			listLength = inventoryListSO.resourceList.Count;
 		}
 	}
 

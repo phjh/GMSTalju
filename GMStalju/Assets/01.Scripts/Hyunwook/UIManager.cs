@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
 	[SerializeField] private GameObject[] UIRoots;
+
+	[SerializeField] private TextMeshProUGUI itemName;
+	[SerializeField] private Image itemImage;
+	[SerializeField] private TextMeshProUGUI itemInfo;
 
 	public GameObject Player;
 	private Inventory inventory;	
@@ -56,9 +62,12 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
-	public void ClickItem()
+	public void ClickItem(ItemSOHolder holder)
 	{
-
+		ResourceSO clickItemData =  holder.ReturnItemData();
+		itemName.text = clickItemData.resourceName;
+		itemImage.sprite = clickItemData.resourceImage;
+		itemInfo.text = clickItemData.resourceExplain;
 	}
 
 	#endregion
