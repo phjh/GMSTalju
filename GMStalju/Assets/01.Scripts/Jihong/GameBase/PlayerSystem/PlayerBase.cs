@@ -8,8 +8,6 @@ public class PlayerBase : PlayerRoot
     [Header("참조 컴포넌트")] 
     [SerializeField]
     protected GameObject moveUI;
-    [SerializeField] 
-    protected List<GameObject> moveUIButton;
     //[SerializeField]
     //protected Animator animator;
     //[SerializeField]
@@ -49,7 +47,7 @@ public class PlayerBase : PlayerRoot
     protected void Move(Vector2 dir)
     {
         Ray2D ray;
-        if (!Physics2D.BoxCast(transform.localPosition + new Vector3(0,0.125f,0), transform.localScale - (new Vector3(0.1f,0.1f,0.1f)), 45 * (float)moveDir, dir, TileSystem.tileSystem.multiplied) && leftMovements > 0)
+        if (!Physics2D.BoxCast(transform.localPosition, transform.localScale - (new Vector3(0.5f,0.5f,0.5f)), 45 * (float)moveDir, dir, TileSystem.tileSystem.multiplied) && leftMovements > 0)
         {
             leftMovements--;
             StartCoroutine(MoveTo(new Vector2(transform.position.x + dir.x, transform.position.y + dir.y)));
@@ -60,11 +58,12 @@ public class PlayerBase : PlayerRoot
     {
         isMoving = true;
         moveUI.SetActive(false);
-        //Quaternion rot = Quaternion.Euler(0, 0, 360 - ((int)moveDir * 45));
-        //yield return transform.DORotate(rot.eulerAngles,Mathf.Abs(degreeInverter(transform.rotation.z) - degreeInverter(rot.z))/2);
+        Quaternion rot = Quaternion.Euler(0, 0, 180 - ((int)moveDir * 45));
+        Quaternion nowrot = transform.rotation;
+        yield return transform.DORotate(rot.eulerAngles,Mathf.Abs(degreeInverter(nowrot.z) - degreeInverter(rot.z))/180f);
         yield return transform.DOMove(pos, Vector2.Distance(transform.position, pos) / speed, false);
-        yield return new WaitForSeconds((Vector2.Distance(transform.position, pos) / speed) + 0.45f);
-        //moveUI.transform.rotation = quaternion.Euler(0,0,0);
+        yield return new WaitForSeconds(Mathf.Min(Mathf.Max(Mathf.Abs(degreeInverter(nowrot.z) - degreeInverter(rot.z))/45f,Vector2.Distance(transform.position, pos) / speed) + 0.45f,2.5f));
+        moveUI.transform.rotation = Quaternion.Euler(0,0,0);
         moveUI.SetActive(true);
         isMoving = false;
     }
