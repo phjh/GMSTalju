@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemSOHolder : UIManager
+public class ItemSOHolder : MonoBehaviour
 {
     private Button button;
     
+    public UIManager manager;
     public ResourceSO thisResourcData;
 
     public ResourceSO ReturnItemData()
@@ -16,11 +17,6 @@ public class ItemSOHolder : UIManager
 
 	private void Start()
 	{
-		button.onClick.AddListener(SetClickEvnet);
+        manager = FindObjectOfType<UIManager>().GetComponent<UIManager>();
 	}
-    
-    public void SetClickEvnet()
-    {
-        Instance.ClickItem(this.GetComponent<ItemSOHolder>());
-    }
 }
