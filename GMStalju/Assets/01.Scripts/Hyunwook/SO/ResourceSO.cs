@@ -8,4 +8,6 @@ public class ResourceSO : ScriptableObject
     public string resourceName = "NULL";
     public Sprite resourceImage = null;
     public string resourceExplain = "There is no explian";
+
+
 }
