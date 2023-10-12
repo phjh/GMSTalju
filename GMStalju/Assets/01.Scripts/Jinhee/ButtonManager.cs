@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject optionPanel;
+
     public void StartGame()
     {
         SceneManager.LoadScene("Jinhee");
@@ -18,4 +20,17 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
+    public void OpenPanel()
+    {
+        optionPanel.SetActive(true);
+        Time.timeScale = 0;
+        Debug.Log("Stop");
+    }
+    public void Close()
+    {
+        optionPanel.SetActive(false);
+        Time.timeScale = 1;
+        Debug.Log("Go");
+    }
+
 }

@@ -5,11 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.TextCore;
 using TMPro;
 
-//using CodeMonkey.Utils;
-
 public class LevelAll : MonoBehaviour
 {
     [SerializeField] Button button5;
+    [SerializeField] Button button10;
     [SerializeField] Button button50;
     [SerializeField] Button button100;
     public TextMeshProUGUI levelTxt;
@@ -21,14 +20,14 @@ public class LevelAll : MonoBehaviour
         level = GetComponent<Level>();
         levelTxt = transform.Find("levelTxt").GetComponent<TextMeshProUGUI>();
         experienceBarimage = transform.Find("experienceBar").Find("Bar").GetComponent<Image>();
-
-        //transform.Find("btn5").GetComponent<Button>().onClick.AddListener(() => level.Addexperience(5));
-        //transform.Find("btn50").GetComponent<Button>().onClick.AddListener(() => level.Addexperience(50));
-        //transform.Find("btn500").GetComponent<Button>().onClick.AddListener(() => level.Addexperience(500));
     }
     public void btn5()
     {
         level.Addexperience(5);
+    }
+    public void btn10()
+    {
+        level.Addexperience(10);
     }
     public void btn50()
     {
@@ -45,7 +44,7 @@ public class LevelAll : MonoBehaviour
     }
     private void SetlevelNumber(int levelNumber)
     {
-        levelTxt.text = "Lv\n" + (levelNumber + 1);
+        levelTxt.text = "Lv " + (levelNumber + 1);
     }
     public void SetlevelSystem(Level level)
     {
