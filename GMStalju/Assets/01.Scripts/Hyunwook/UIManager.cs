@@ -34,17 +34,25 @@ public class UIManager : MonoBehaviour
 
 	private void Start()
 	{
+		tempUI = 0;
 		Player = GameObject.Find("Player");
 		inventory = Player.GetComponent<Inventory>();
 	}
 
 	#region UI Method
-	private int tempUI;
+	private int tempUI = 0;
 
 	public void ShowUI(int number)
 	{
+		UIRoots[tempUI].SetActive(false);
 		tempUI = number;
 		UIRoots[number].SetActive(true);
+		if (UIRoots[number].name == "InventoryRoot")
+		{
+			itemName.text = "";
+			itemImage.sprite = null;
+			itemInfo.text = "";
+		}
 	}
 
 	public void BackUI()
