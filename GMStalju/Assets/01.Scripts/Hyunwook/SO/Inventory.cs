@@ -44,8 +44,8 @@ public class Inventory : MonoBehaviour
 		else if(index <= 0)
 		{
 			inventoryListSO.resourceList[index].resourceCount += count;
+			if(inventoryListSO.resourceList[index].resourceCount <= 999) inventoryListSO.resourceList[index].resourceCount = 999;
 		}
-		if(inventoryListSO.resourceList[index].resourceCount <= 999) inventoryListSO.resourceList[index].resourceCount = 999;
 	}
 
 	public bool RemoveResource(ResourceSO resource, int count)
