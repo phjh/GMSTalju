@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,9 @@ public class PlayerBase : PlayerRoot
     //[SerializeField]
     //protected Rigidbody2D rb;
 
-    [Header("값 설정 변수")]
+    [Header("값 설정 변수")] 
+    [SerializeField] 
+    protected int maxMovements = 50;
     [SerializeField]
     protected int leftMovements;
     [SerializeField]
@@ -42,11 +45,16 @@ public class PlayerBase : PlayerRoot
     private void RecallEvent(Vector2 value)
     {
         transform.position = value;
+        leftMovements = maxMovements;
     }
 
     protected void Move(Vector2 dir)
     {
         Ray2D ray;
+        if (leftMovements == 0)
+        {
+            RecallPlayer(recallPos);
+        }
         if (!Physics2D.BoxCast(transform.localPosition, transform.localScale - (new Vector3(0.5f,0.5f,0.5f)), 45 * (float)moveDir, dir, TileSystem.tileSystem.multiplied) && leftMovements > 0)
         {
             leftMovements--;
