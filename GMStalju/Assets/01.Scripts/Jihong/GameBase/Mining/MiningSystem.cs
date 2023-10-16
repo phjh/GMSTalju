@@ -33,6 +33,10 @@ public class MiningSystem : PlayerRoot
         return false;
     }
 
+    void Mining()
+    {
+        
+    }
     
     
     private void OnMovement()
