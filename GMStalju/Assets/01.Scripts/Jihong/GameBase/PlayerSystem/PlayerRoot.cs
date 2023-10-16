@@ -16,8 +16,14 @@ public enum MoveDir
 public abstract class PlayerRoot : MonoBehaviour
 {
     //이벤트들
+    protected Action MoveAction;
     protected Action<Vector2> Recallcoord;
     protected Action<Vector2> detection;
+
+    protected void MoveEvent()
+    {
+        MoveAction?.Invoke();
+    }
     
     protected void RecallPlayer(Vector2 dir)
     {

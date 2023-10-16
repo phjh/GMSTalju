@@ -17,6 +17,7 @@ public class MiningSystem : PlayerRoot
     private void Start()
     {
         //detection += ;
+        MoveAction += OnMovement;
     }
 
     private bool detecting()
@@ -35,13 +36,16 @@ public class MiningSystem : PlayerRoot
 
     void Mining()
     {
-        
+        if (mineablething.Count != 0)
+        {
+            
+        }
     }
     
     
     private void OnMovement()
     {
-        nowPos = new Vector3Int((int)transform.position.x, (int)transform.position.y,0);
+        nowPos = new Vector3Int((int)(transform.position.x-0.5f), (int)(transform.position.y-0.5f),0);
         
     }
 

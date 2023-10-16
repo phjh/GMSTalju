@@ -3,12 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Tilemaps;
 
 public class PlayerBase : PlayerRoot
 {
     [Header("참조 컴포넌트")] 
     [SerializeField]
     protected GameObject moveUI;
+    [SerializeField] 
+    protected Tilemap _tilemap;
+    [SerializeField] 
+    protected List<GameObject> moveUIs;
     //[SerializeField]
     //protected Animator animator;
     //[SerializeField]
@@ -36,6 +41,14 @@ public class PlayerBase : PlayerRoot
     protected bool isMoving = false;
 
     private float degreeInverter(float f) => f <= 0 ? 360 + f : f;
+
+    private bool CanMove(MoveDir md) => (!Physics2D.BoxCast(transform.localPosition,
+                                   transform.localScale - (new Vector3(0.3f, 0.3f, 0.3f)), 45 * (float)md, Inverter(md),
+                                   TileSystem.tileSystem.multiplied)
+                               && leftMovements > 0 &&
+                               _tilemap.GetTile(new Vector3Int((int)(transform.position.x-0.5f) + (int)Inverter(md).x, (int)(transform.position.y-0.5f) + (int)Inverter(md).y,
+                                   0)) != null);
+    
     
     private void Start()
     {
@@ -55,10 +68,11 @@ public class PlayerBase : PlayerRoot
         {
             RecallPlayer(recallPos);
         }
-        if (!Physics2D.BoxCast(transform.localPosition, transform.localScale - (new Vector3(0.5f,0.5f,0.5f)), 45 * (float)moveDir, dir, TileSystem.tileSystem.multiplied) && leftMovements > 0)
+        if (CanMove(moveDir))
         {
             leftMovements--;
             StartCoroutine(MoveTo(new Vector2(transform.position.x + dir.x, transform.position.y + dir.y)));
+            MoveEvent();
         }
     }
 
@@ -74,8 +88,25 @@ public class PlayerBase : PlayerRoot
         moveUI.transform.rotation = Quaternion.Euler(0,0,0);
         moveUI.SetActive(true);
         isMoving = false;
+        SetEnableNextMoveUI();
     }
 
+    void SetEnableNextMoveUI()
+    {
+        foreach (var v in moveUIs)
+        {
+            v.SetActive(true);
+        }
+        
+        for (int i = 0; i < 8; i++)
+        {
+            if (!CanMove((MoveDir)i))
+            {
+                moveUIs[i].SetActive(false);
+            }
+        }
+    }
+    
     public void NextMove(int dir)
     {
         moveDir = (MoveDir)dir;
