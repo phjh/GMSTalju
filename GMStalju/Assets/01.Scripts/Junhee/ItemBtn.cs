@@ -9,6 +9,7 @@ public class ItemBtn : MonoBehaviour
 {
     [SerializeField] GameObject Dictionary;
     [SerializeField] GameObject SpriteImageCanvas;
+    [SerializeField] GameObject ImageCanvas;
     [SerializeField] GameObject StonePanel;
     [SerializeField] GameObject ToolPanel;
     [SerializeField] TextMeshProUGUI ItemName;
@@ -27,6 +28,7 @@ public class ItemBtn : MonoBehaviour
     {
         SpriteImageCanvas.SetActive(false);
         Dictionary.SetActive(false);
+        ImageCanvas.SetActive(false);
         
         
     }
@@ -73,11 +75,13 @@ public class ItemBtn : MonoBehaviour
     {
         Dictionary.SetActive(true);
         SpriteImageCanvas.SetActive(true);
+        ImageCanvas.SetActive(true);
     }
     public void ExitBtn()
     {
         Dictionary.SetActive(false);
         SpriteImageCanvas.SetActive(false);
+        ImageCanvas.SetActive(false);
     }
 
     public void ToolBtn()
