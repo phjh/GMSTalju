@@ -20,13 +20,13 @@ public class Inventory : MonoBehaviour
 
 	private void Awake()
 	{
-		if (Path.Combine(Application.dataPath, "InventoryData.json") != null)
+		/*if (Path.Combine(Application.dataPath + "\\Json", "InventoryData.json") != null)
 		{
-			string path = Path.Combine(Application.dataPath, "InventoryData.json");
+			string path = Path.Combine(Application.dataPath + "\\Json", "InventoryData.json");
 			string jsonData = File.ReadAllText(path);
 			inventoryListSO = JsonUtility.FromJson<ResourceListSO>(jsonData);
 			listLength = inventoryListSO.resourceList.Count;
-		}
+		}*/
 	}
 
 	public void AddResource(ResourceSO resource, int count)
@@ -99,7 +99,7 @@ public class Inventory : MonoBehaviour
 	public void SavePlayerInventory()
 	{
 		string jsonData = JsonUtility.ToJson(inventoryListSO, true);
-		string path = Path.Combine(Application.dataPath, "InventoryData.json");
+		string path = Path.Combine(Application.dataPath + "\\Json", "InventoryData.json");
 		File.WriteAllText(path, jsonData);
 	}
 
