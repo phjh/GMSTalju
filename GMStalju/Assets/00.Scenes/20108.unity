@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 608207973}
   - component: {fileID: 608207972}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,6 +775,8 @@ MonoBehaviour:
   itemName: {fileID: 49466301}
   itemImage: {fileID: 1541873403}
   itemInfo: {fileID: 1871490220}
+  ItemIconPrefab: {fileID: 1035795585390283144, guid: 816ff9cc11227e448beb13ab8e96dcf2, type: 3}
+  iconParent: {fileID: 1014317694}
   Player: {fileID: 1972752881}
 --- !u!4 &608207973
 Transform:
@@ -2485,8 +2487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryListSO: {fileID: 11400000, guid: 4933be7554f092a48a552a83f6399708, type: 2}
   listLength: 0
-  ItemIconPrefab: {fileID: 1035795585390283144, guid: 816ff9cc11227e448beb13ab8e96dcf2, type: 3}
-  iconParent: {fileID: 1014317694}
 --- !u!114 &1972752885
 MonoBehaviour:
   m_ObjectHideFlags: 0

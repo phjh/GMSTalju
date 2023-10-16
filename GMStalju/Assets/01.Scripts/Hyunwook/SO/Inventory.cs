@@ -15,11 +15,11 @@ public class Inventory : MonoBehaviour
 	[SerializeField] private ResourceListSO inventoryListSO;
 	[HideInInspector] public int listLength = 0;
 
-	[SerializeField] private GameObject ItemIconPrefab;
-	public GameObject iconParent;
+	private UIManager uiManager;
 
 	private void Awake()
 	{
+		uiManager = FindAnyObjectByType<UIManager>();
 		/*if (Path.Combine(Application.dataPath + "\\Json", "InventoryData.json") != null)
 		{
 			string path = Path.Combine(Application.dataPath + "\\Json", "InventoryData.json");
@@ -35,12 +35,17 @@ public class Inventory : MonoBehaviour
 		addValue.resourceMain = resource;
 		addValue.resourceCount = count;
 		int index = inventoryListSO.resourceList.FindIndex(r => r.resourceMain == addValue.resourceMain);
-		if (index == -1) inventoryListSO.AddToList(addValue, listLength);
-		else
+		if (index == -1) 
 		{
-			inventoryListSO.AddToList(addValue, index);
+			inventoryListSO.AddToList(addValue, listLength);
+			uiManager.AddResource(resource);
 			listLength++;
 		}
+		else if(index <= 0)
+		{
+			inventoryListSO.resourceList[index].resourceCount += count;
+		}
+		if(inventoryListSO.resourceList[index].resourceCount <= 999) inventoryListSO.resourceList[index].resourceCount = 999;
 	}
 
 	public bool RemoveResource(ResourceSO resource, int count)
@@ -56,13 +61,13 @@ public class Inventory : MonoBehaviour
 			inventoryListSO.resourceList[index].resourceCount = removeValue.resourceCount - count;
 			return true;
 		}
-		else if (removeValue.resourceCount - count < 0) return false;
 		else if (removeValue.resourceCount - count == 0)
 		{
 			listLength--;
 			inventoryListSO.RemoveToList(removeValue, index);
 			return true;
 		}
+		else if (removeValue.resourceCount - count < 0) return false;
 		return false;
 	}
 
@@ -102,16 +107,4 @@ public class Inventory : MonoBehaviour
 		string path = Path.Combine(Application.dataPath + "\\Json", "InventoryData.json");
 		File.WriteAllText(path, jsonData);
 	}
-
-	#region Add To UI
-	public void AddInventoryIcon(ResourceSO addResource)
-	{
-		var itemIcon = Instantiate(ItemIconPrefab, Vector3.one, Quaternion.identity);
-		if (itemIcon.GetComponent<ItemSOHolder>() == null)
-			itemIcon.AddComponent<ItemSOHolder>();
-		ItemSOHolder holder = itemIcon.GetComponent<ItemSOHolder>();
-		holder.thisResourcData = addResource;
-		itemIcon.transform.parent = iconParent.transform;
-	}
-	#endregion
 }

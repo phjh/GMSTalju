@@ -9,8 +9,26 @@ public class UIManager : MonoBehaviour
 	[SerializeField] private GameObject[] UIRoots;
 
 	[SerializeField] private TextMeshProUGUI itemName;
+	public TextMeshProUGUI ItemName
+	{
+		get { return itemName; }
+		set { itemName = value; }
+	}
 	[SerializeField] private Image itemImage;
+	public Image ItemImage
+	{
+		get { return itemImage; }
+		set { itemImage = value; }
+	}
 	[SerializeField] private TextMeshProUGUI itemInfo;
+	public TextMeshProUGUI ItemInfo
+	{
+		get { return itemInfo; }
+		set { itemInfo = value; }
+	}
+
+	[SerializeField] private GameObject ItemIconPrefab;
+	public GameObject iconParent;
 
 	public GameObject Player;
 	private Inventory inventory;	
@@ -69,15 +87,13 @@ public class UIManager : MonoBehaviour
 				break;
 		}
 	}
-
-	public void ClickItem(ItemSOHolder holder)
+	
+	public void AddResource(ResourceSO addResourceSO)
 	{
-		ResourceSO clickItemData =  holder.ReturnItemData();
-		itemName.text = clickItemData.resourceName;
-		itemImage.sprite = clickItemData.resourceImage;
-		itemInfo.text = clickItemData.resourceExplain;
+		GameObject itemIcon = Instantiate(ItemIconPrefab, iconParent.transform);
+		ItemSOHolder holder = itemIcon.GetComponent<ItemSOHolder>();
+		holder.thisResourcData = addResourceSO;
 	}
-
 	#endregion
 
 }

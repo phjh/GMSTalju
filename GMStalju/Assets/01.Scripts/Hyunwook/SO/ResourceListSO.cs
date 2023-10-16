@@ -10,8 +10,8 @@ public class ResourceListSO : ScriptableObject
 
     public void AddToList(ResourceValue resourceValue, int index)
     {
-	    if(resourceList.Find(r => r.resourceMain == resourceValue.resourceMain) != null) resourceList.Add(resourceValue);
-        resourceList[index].resourceCount += resourceValue.resourceCount;
+	    if(resourceList.Find(r => r.resourceMain == resourceValue.resourceMain) == null) resourceList.Add(resourceValue);
+        resourceList[index].resourceCount = 0;
 	}
 
     public bool RemoveToList(ResourceValue resourceValue, int index)
