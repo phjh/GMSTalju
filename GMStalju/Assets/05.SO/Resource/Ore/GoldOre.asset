@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: GoldOre
   m_EditorClassIdentifier: 
-  resourceName: "\uAE08 \uAD11\uC11D"
-  resourceImage: {fileID: 0}
-  resourceExplain: "\uC815\uC81C\uB418\uC9C0 \uC54A\uC740 \uAE08\uC774\uB2E4. \uBE5B\uC774
-    \uBC18\uC0AC\uB418 \uBC18\uC9DD\uAC70\uB9AC\uB294 \uAC83\uC774 \uB9E4\uC6B0 \uC544\uB984\uB2F5\uB2E4."
+  resourceName: Gold Ore
+  resourceImage: {fileID: 21300000, guid: cb28e00fe79755245ba77a1b28f9c830, type: 3}
+  resourceExplain: It is unrefined gold ore. It is very beautiful to see the light
+    reflected and sparkle.

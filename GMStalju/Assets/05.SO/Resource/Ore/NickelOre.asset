@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: NickelOre
   m_EditorClassIdentifier: 
-  resourceName: "\uB2C8\uCF08 \uAD11\uC11D"
-  resourceImage: {fileID: 0}
-  resourceExplain: "\uB2C8\uCF08\uC758 \uAD11\uC11D\uC774\uB2E4.  \uC545\uB9C8\uB77C\uB294
-    \uB73B\uC744 \uAC00\uC9C0\uACE0 \uC788\uB2E4\uACE0 \uD55C\uB2E4."
+  resourceName: Nickel Ore
+  resourceImage: {fileID: 21300000, guid: fe82354496c6f064bb0aa5d0b99c98b1, type: 3}
+  resourceExplain: It is the nickel ore.  It's name is said that it means demon.

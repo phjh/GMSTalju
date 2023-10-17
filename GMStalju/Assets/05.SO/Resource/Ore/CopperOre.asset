@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: CopperOre
   m_EditorClassIdentifier: 
-  resourceName: "\uAD6C\uB9AC \uAD11\uC11D"
-  resourceImage: {fileID: 0}
-  resourceExplain: "\uAD6C\uB9AC\uC758 \uAD11\uC11D\uC774\uB2E4. \uC804\uC790\uAE30\uAE30
-    \uC81C\uC791\uC758 \uD544\uC218\uD488\uC774\uB2E4."
+  resourceName: Copper Ore
+  resourceImage: {fileID: 21300000, guid: c42e8bb90566e224b991944b11abfd58, type: 3}
+  resourceExplain: Copper ore. It is an essential part of the manufacture of electronic
+    devices.

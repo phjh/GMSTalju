@@ -39,11 +39,13 @@ public class Inventory : MonoBehaviour
 		{
 			inventoryListSO.AddToList(addValue, listLength);
 			uiManager.AddResource(resource);
+			uiManager.UpdateCount(listLength, inventoryListSO.resourceList[index].resourceCount);
 			listLength++;
 		}
 		else if(index <= 0)
 		{
 			inventoryListSO.resourceList[index].resourceCount += count;
+			uiManager.UpdateCount(index, inventoryListSO.resourceList[index].resourceCount);
 			if(inventoryListSO.resourceList[index].resourceCount <= 999) inventoryListSO.resourceList[index].resourceCount = 999;
 		}
 	}

@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: RubyOre
   m_EditorClassIdentifier: 
-  resourceName: "\uB8E8\uBE44 \uAD11\uC11D"
-  resourceImage: {fileID: 0}
-  resourceExplain: "\uBD89\uC740 \uC0C9\uC758 \uB8E8\uBE44 \uAD11\uC11D\uC774\uB2E4.
-    \uAC00\uACF5\uC774 \uC5B4\uB835\uC9C0\uB9CC, \uB192\uC740 \uB4F1\uAE09\uC758
-    \uC544\uC774\uD15C\uC744 \uB9CC\uB4E4 \uC218 \uC788\uB2E4."
+  resourceName: RubyOre
+  resourceImage: {fileID: 21300000, guid: c2eb2c8809e8dde46ac55566f5d2f899, type: 3}
+  resourceExplain: It is a red ruby ore. It is difficult to process, but you can
+    make high-grade items.

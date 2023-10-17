@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 {
 	[SerializeField] private GameObject[] UIRoots;
 
+	private List<ItemSOHolder> IconList;
+
 	[SerializeField] private TextMeshProUGUI itemName;
 	public TextMeshProUGUI ItemName
 	{
@@ -93,6 +95,12 @@ public class UIManager : MonoBehaviour
 		GameObject itemIcon = Instantiate(ItemIconPrefab, iconParent.transform);
 		ItemSOHolder holder = itemIcon.GetComponent<ItemSOHolder>();
 		holder.thisResourcData = addResourceSO;
+		IconList.Add(holder);
+	}
+
+	public void UpdateCount(int index, int count)
+	{
+		IconList[index].UpdateCount(count);
 	}
 	#endregion
 

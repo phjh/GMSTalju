@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688c563f64973dc4585b56b39d224a4c, type: 3}
   m_Name: QuartzOre
   m_EditorClassIdentifier: 
-  resourceName: "\uC11D\uC601 \uAD11\uC11D"
-  resourceImage: {fileID: 0}
-  resourceExplain: "\uC601\uB871\uD55C \uC11D\uC601\uC758 \uAD11\uC11D\uC774\uB2E4.
-    \uBE5B\uC744 \uBC1B\uC73C\uBA74 \uC5EC\uB7EC\uAC08\uB798\uB85C \uBC18\uC0AC\uB418\uB294
-    \uAC83\uC774 \uB9E4\uB825\uC774\uB2E4."
+  resourceName: Quartz Ore
+  resourceImage: {fileID: 21300000, guid: 306c3dd32f94fda449cd0b127d986d03, type: 3}
+  resourceExplain: It is a brilliant quartz ore. The attraction is that it reflects
+    in many ways when it receives light.
